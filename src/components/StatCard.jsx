@@ -6,7 +6,7 @@ export default function StatCard({ icon: Icon, label, value, sub, delay = 0 }) {
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay, ease: 'easeOut' }}
-      className="flex items-start gap-2.5 rounded-xl border border-border bg-white/80 backdrop-blur-sm px-3 py-3 shadow-card sm:gap-3 sm:px-4 sm:py-3.5"
+      className="min-w-0 flex items-start gap-2.5 rounded-xl border border-border bg-white/80 backdrop-blur-sm px-3 py-3 shadow-card sm:gap-3 sm:px-4 sm:py-3.5"
     >
       <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-soft text-primary sm:h-9 sm:w-9">
         <Icon size={16} strokeWidth={2} className="sm:hidden" />

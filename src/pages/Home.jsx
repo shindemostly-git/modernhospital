@@ -240,12 +240,10 @@ export default function Home() {
             </motion.div>
 
             {/* Metric cards */}
-            <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
+            <div className="mt-6 grid grid-cols-1 gap-2.5 min-[480px]:grid-cols-3 sm:gap-3">
               <StatCard icon={Clock3} label="OPD TIMING" value="10–2 & 6–8" sub="Emergency care: 24 hours" delay={0.4} />
               <StatCard icon={Wallet} label="CONSULTATION FEE" value="₹600" sub="Follow-up (1 mo.): ₹500" delay={0.48} />
-              <div className="col-span-2 sm:col-span-1">
-                <StatCard icon={GraduationCap} label="EXPERIENCE" value="40+ Years" sub="Israel & Portugal fellowship" delay={0.56} />
-              </div>
+              <StatCard icon={GraduationCap} label="EXPERIENCE" value="40+ Years" sub="Israel & Portugal fellowship" delay={0.56} />
             </div>
           </div>
 
@@ -717,11 +715,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* ================================================================ */}
-      {/* FOOTER                                                           */}
-      {/* ================================================================ */}
-      
 
       {/* ================================================================ */}
       {/* MOBILE BOTTOM NAV                                                */}
