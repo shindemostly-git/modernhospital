@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Core clinical palette — derived from reference: deep royal blue, soft cyan,
+     light blue-gray backgrounds, white surfaces, lavender-tinted sections. */
+  --primary: #1B3A6B;         /* deep royal/clinical blue — headings, primary buttons */
+  --primary-dark: #12294E;    /* darker navy — hover states, footer */
+  --secondary: #0E7C9E;       /* soft cyan/teal — secondary accents, links */
+  --accent: #2F6FE0;          /* brighter accent blue — highlighted headline word, focus rings */
+  --background: #F6F8FC;      /* very light blue-gray page background */
+  --surface: #FFFFFF;         /* card / panel surfaces */
+  --surface-soft: #EEF2FB;    /* subtle lavender-blue tinted section background */
+  --text-primary: #101828;    /* near-black navy for primary text */
+  --text-secondary: #5B6474;  /* muted slate for supporting text */
+  --border: #E3E8F0;          /* hairline borders */
+  --success: #167A4C;         /* green status accents */
+  --danger: #A81C2E;          /* emergency / red accents */
+  --danger-dark: #7E1522;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif-display {
+  font-family: 'Source Serif 4', Georgia, serif;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #C7D0DE;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
