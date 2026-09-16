@@ -1,5 +1,3 @@
-
-
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -167,7 +165,7 @@ const FAQS = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden bg-background pb-16 md:pb-0">
+    <div className="min-h-screen w-full max-w-[100vw] overflow-x-hidden overscroll-x-none bg-background pb-16 md:pb-0">
     
 
       {/* ================================================================ */}
@@ -191,7 +189,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 22 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
-              className="mt-4 text-[26px] font-extrabold leading-[1.15] tracking-tight text-text-primary xs:text-[30px] sm:text-[44px] lg:text-[48px]"
+              className="mt-4 text-[24px] font-extrabold leading-[1.18] tracking-tight text-text-primary min-[400px]:text-[28px] sm:text-[40px] md:text-[44px] lg:text-[48px]"
             >
               Expert Bone & Joint Care.
               <br />
@@ -202,7 +200,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22 }}
-              className="mt-4 max-w-lg text-[15px] leading-relaxed text-text-secondary sm:text-[15.5px]"
+              className="mt-4 max-w-lg text-[14px] leading-relaxed text-text-secondary sm:text-[15.5px]"
             >
               Modern Hospital, Pune is home to internationally fellowship-trained orthopaedic
               surgeons offering fracture care, joint replacement, non-surgical pain relief,
@@ -242,10 +240,12 @@ export default function Home() {
             </motion.div>
 
             {/* Metric cards */}
-            <div className="mt-6 grid grid-cols-1 gap-3 xs:grid-cols-3 sm:grid-cols-3">
+            <div className="mt-6 grid grid-cols-2 gap-2.5 sm:grid-cols-3 sm:gap-3">
               <StatCard icon={Clock3} label="OPD TIMING" value="10–2 & 6–8" sub="Emergency care: 24 hours" delay={0.4} />
               <StatCard icon={Wallet} label="CONSULTATION FEE" value="₹600" sub="Follow-up (1 mo.): ₹500" delay={0.48} />
-              <StatCard icon={GraduationCap} label="EXPERIENCE" value="40+ Years" sub="Israel & Portugal fellowship" delay={0.56} />
+              <div className="col-span-2 sm:col-span-1">
+                <StatCard icon={GraduationCap} label="EXPERIENCE" value="40+ Years" sub="Israel & Portugal fellowship" delay={0.56} />
+              </div>
             </div>
           </div>
 
@@ -262,13 +262,13 @@ export default function Home() {
                   src="/images/nazimshaikh.png"
                   alt="Dr. Nazim Shaikh, Orthopaedic Surgeon at Modern Hospital, Pune"
                   loading="lazy"
-                  className="h-52 w-full object-cover xs:h-60 sm:h-72"
+                  className="h-48 w-full object-cover min-[400px]:h-56 sm:h-72"
                 />
                 <motion.span
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-success shadow-card"
+                  className="absolute left-2 top-2 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2 py-1 text-[10px] font-semibold text-success shadow-card sm:left-3 sm:top-3 sm:px-2.5 sm:text-[11px]"
                 >
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-success" />
                   <span className="whitespace-nowrap">OPD Open Today</span>
@@ -277,26 +277,26 @@ export default function Home() {
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-semibold text-text-primary shadow-card"
+                  className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-white/95 px-2 py-1 text-[10px] font-semibold text-text-primary shadow-card sm:right-3 sm:top-3 sm:px-2.5 sm:text-[11px]"
                 >
                   <Star size={12} className="shrink-0 fill-[#F4A83A] text-[#F4A83A]" />
                   <span className="whitespace-nowrap">40+ Yrs Exp.</span>
                 </motion.span>
               </div>
 
-              <div className="p-4">
+              <div className="p-3 sm:p-4">
                 <p className="text-[11px] font-semibold tracking-wide text-secondary">ORTHOPAEDIC SURGEON</p>
-                <h3 className="mt-0.5 break-words text-[17px] font-bold text-text-primary">Dr. Nazim Shaikh, M.S. (Ortho)</h3>
-                <p className="mt-0.5 break-words text-[13px] text-text-secondary">
+                <h3 className="mt-0.5 break-words text-[16px] font-bold text-text-primary sm:text-[17px]">Dr. Nazim Shaikh, M.S. (Ortho)</h3>
+                <p className="mt-0.5 break-words text-[12.5px] text-text-secondary sm:text-[13px]">
                   Fellowship: I.P.T.M. (Israel) · Fellowship (Portugal) · Secretary, MMERC
                 </p>
 
-                <div className="mt-3 flex flex-col items-start gap-2.5 rounded-lg bg-surface-soft px-3 py-2.5 xs:flex-row xs:items-center xs:justify-between">
+                <div className="mt-3 flex flex-col items-start gap-2.5 rounded-lg bg-surface-soft px-3 py-2.5 min-[400px]:flex-row min-[400px]:items-center min-[400px]:justify-between">
                   <div className="min-w-0">
                     <p className="text-[11px] font-medium text-text-secondary">Next OPD Slot</p>
-                    <p className="text-[13.5px] font-semibold text-text-primary">Today, 6:00 PM Onwards</p>
+                    <p className="text-[13px] font-semibold text-text-primary sm:text-[13.5px]">Today, 6:00 PM Onwards</p>
                   </div>
-                  <Button as="a" href="tel:+912026138375" size="sm" className="w-full xs:w-auto shrink-0">Call Now</Button>
+                  <Button as="a" href="tel:+912026138375" size="sm" className="w-full shrink-0 min-[400px]:w-auto">Call Now</Button>
                 </div>
               </div>
             </div>
@@ -338,7 +338,7 @@ export default function Home() {
               src="https://images.unsplash.com/photo-1612531386530-97286d97c2d2?q=80&w=800&auto=format&fit=crop"
               alt="Orthopaedic surgeon reviewing a patient's knee and joint condition"
               loading="lazy"
-              className="h-56 w-full object-cover sm:h-64 lg:h-80"
+              className="h-48 w-full object-cover sm:h-64 lg:h-80"
             />
           </motion.div>
 
@@ -350,10 +350,10 @@ export default function Home() {
             className="order-1 min-w-0 lg:order-2"
           >
             <span className="text-[13px] font-semibold tracking-wide text-secondary">Orthopaedic &amp; Trauma Care</span>
-            <h2 className="mt-2 text-[24px] font-bold leading-tight text-text-primary sm:text-[30px]">
+            <h2 className="mt-2 text-[22px] font-bold leading-tight text-text-primary sm:text-[30px]">
               Fracture, Arthritis & Joint Treatment
             </h2>
-            <p className="mt-3 text-[14.5px] leading-relaxed text-text-secondary sm:text-[15px]">
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary sm:text-[15px]">
               A complete range of orthopaedic consultation and treatment — from acute fractures
               and trauma to long-standing arthritis and joint disease.
             </p>
@@ -398,10 +398,10 @@ export default function Home() {
             className="min-w-0"
           >
             <span className="text-[13px] font-semibold tracking-wide text-secondary">Treatment Without Surgery</span>
-            <h2 className="mt-2 text-[24px] font-bold leading-tight text-text-primary sm:text-[30px]">
+            <h2 className="mt-2 text-[22px] font-bold leading-tight text-text-primary sm:text-[30px]">
               Many pain disorders can be treated without surgery
             </h2>
-            <p className="mt-3 text-[14.5px] leading-relaxed text-text-secondary sm:text-[15px]">
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary sm:text-[15px]">
               Using intra-articular injections and trigger-point injections, our team relieves
               pain and restores mobility for conditions that don't require an operation —
               followed by guided physiotherapy for lasting recovery.
@@ -437,7 +437,7 @@ export default function Home() {
   src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?q=80&w=800&auto=format&fit=crop"
   alt="Physiotherapist guiding a patient through a shoulder mobility exercise"
   loading="lazy"
-  className="h-56 w-full object-cover sm:h-64 lg:h-80"
+  className="h-48 w-full object-cover sm:h-64 lg:h-80"
 />
           </motion.div>
         </div>
@@ -456,15 +456,15 @@ export default function Home() {
             className="min-w-0"
           >
             <span className="text-[13px] font-semibold tracking-wide text-secondary">General &amp; Plastic Surgery</span>
-            <h2 className="mt-2 text-[24px] font-bold leading-tight text-text-primary sm:text-[30px]">
+            <h2 className="mt-2 text-[22px] font-bold leading-tight text-text-primary sm:text-[30px]">
               Surgical Care for All Ages
             </h2>
-            <p className="mt-3 text-[14.5px] leading-relaxed text-text-secondary sm:text-[15px]">
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary sm:text-[15px]">
               Beyond orthopaedics, Modern Hospital offers general surgical treatment and
               paediatric surgical correction for children with congenital conditions.
             </p>
 
-            <div className="mt-5 grid grid-cols-1 gap-6 xs:grid-cols-2">
+            <div className="mt-5 grid grid-cols-1 gap-6 min-[420px]:grid-cols-2">
               <div className="min-w-0">
                 <h3 className="text-[13px] font-semibold text-text-primary">General Surgery</h3>
                 <ul className="mt-3 space-y-2.5">
@@ -509,13 +509,13 @@ export default function Home() {
               src="https://images.unsplash.com/photo-1640876777002-badf6aee5bcc?q=80&w=500&auto=format&fit=crop"
               alt="Surgical team performing a procedure in a modern operating room"
               loading="lazy"
-              className="col-span-2 h-36 w-full rounded-xl border border-border object-cover shadow-card xs:h-40 sm:h-48"
+              className="col-span-2 h-32 w-full rounded-xl border border-border object-cover shadow-card min-[400px]:h-36 sm:h-48"
             />
             <img
               src="https://images.unsplash.com/photo-1758691462126-2ee47c8bf9e7?q=80&w=500&auto=format&fit=crop"
               alt="Doctor consulting with a mother and child about paediatric care"
               loading="lazy"
-              className="col-span-2 h-36 w-full rounded-xl border border-border object-cover shadow-card xs:h-40 sm:h-48"
+              className="col-span-2 h-32 w-full rounded-xl border border-border object-cover shadow-card min-[400px]:h-36 sm:h-48"
             />
           </motion.div>
         </div>
@@ -556,33 +556,33 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.6 }}
-              className="rounded-xl border border-border bg-white p-5 shadow-card sm:p-6"
+              className="rounded-xl border border-border bg-white p-4 shadow-card sm:p-6"
             >
               <div className="flex items-center gap-2">
                 <Timer size={18} className="shrink-0 text-primary" />
-                <h3 className="text-[16px] font-semibold text-text-primary">OPD Timings &amp; Fees</h3>
+                <h3 className="text-[15px] font-semibold text-text-primary sm:text-[16px]">OPD Timings &amp; Fees</h3>
               </div>
 
               <div className="mt-4 divide-y divide-border">
-                <div className="flex items-center justify-between gap-3 py-3">
-                  <span className="text-[13.5px] text-text-secondary">Morning OPD</span>
-                  <span className="text-right text-[14px] font-semibold text-text-primary">10:00 AM – 2:00 PM</span>
+                <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
+                  <span className="text-[13px] text-text-secondary sm:text-[13.5px]">Morning OPD</span>
+                  <span className="text-right text-[13.5px] font-semibold text-text-primary sm:text-[14px]">10:00 AM – 2:00 PM</span>
                 </div>
-                <div className="flex items-center justify-between gap-3 py-3">
-                  <span className="text-[13.5px] text-text-secondary">Evening OPD</span>
-                  <span className="text-right text-[14px] font-semibold text-text-primary">6:00 PM – 8:00 PM</span>
+                <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
+                  <span className="text-[13px] text-text-secondary sm:text-[13.5px]">Evening OPD</span>
+                  <span className="text-right text-[13.5px] font-semibold text-text-primary sm:text-[14px]">6:00 PM – 8:00 PM</span>
                 </div>
-                <div className="flex items-center justify-between gap-3 py-3">
-                  <span className="text-[13.5px] text-text-secondary">Emergency Care</span>
-                  <span className="text-right text-[14px] font-semibold text-danger">Available 24 Hours</span>
+                <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
+                  <span className="text-[13px] text-text-secondary sm:text-[13.5px]">Emergency Care</span>
+                  <span className="text-right text-[13.5px] font-semibold text-danger sm:text-[14px]">Available 24 Hours</span>
                 </div>
-                <div className="flex items-center justify-between gap-3 py-3">
-                  <span className="text-[13.5px] text-text-secondary">Consultation Fee</span>
-                  <span className="text-right text-[14px] font-semibold text-text-primary">₹600</span>
+                <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
+                  <span className="text-[13px] text-text-secondary sm:text-[13.5px]">Consultation Fee</span>
+                  <span className="text-right text-[13.5px] font-semibold text-text-primary sm:text-[14px]">₹600</span>
                 </div>
-                <div className="flex items-center justify-between gap-3 py-3">
-                  <span className="text-[13.5px] text-text-secondary">Follow-up Fee (within 1 month)</span>
-                  <span className="text-right text-[14px] font-semibold text-text-primary">₹500</span>
+                <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-3">
+                  <span className="text-[13px] text-text-secondary sm:text-[13.5px]">Follow-up Fee (within 1 month)</span>
+                  <span className="text-right text-[13.5px] font-semibold text-text-primary sm:text-[14px]">₹500</span>
                 </div>
               </div>
 
@@ -600,7 +600,7 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.6, delay: 0.1 + i * 0.1 }}
-                  className="rounded-xl border border-border bg-white p-5 shadow-card"
+                  className="rounded-xl border border-border bg-white p-4 shadow-card sm:p-5"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex min-w-0 items-start gap-3">
@@ -608,7 +608,7 @@ export default function Home() {
                         <Building2 size={17} />
                       </span>
                       <div className="min-w-0">
-                        <h4 className="break-words text-[15px] font-semibold text-text-primary">{loc.name}</h4>
+                        <h4 className="break-words text-[14.5px] font-semibold text-text-primary sm:text-[15px]">{loc.name}</h4>
                         <span className="text-[11px] font-semibold text-secondary">{loc.tag}</span>
                       </div>
                     </div>
@@ -703,15 +703,15 @@ export default function Home() {
       {/* ================================================================ */}
       <section className="border-y border-border bg-danger">
         <div className="mx-auto flex max-w-content flex-col items-start justify-between gap-3 px-4 py-4 text-white sm:flex-row sm:items-center sm:px-6">
-          <div className="flex items-center gap-2.5 text-[14px] font-semibold sm:text-[15px]">
+          <div className="flex items-center gap-2.5 text-[13.5px] font-semibold sm:text-[15px]">
             <Ambulance size={18} className="shrink-0" />
             Emergency care available 24 hours a day
           </div>
-          <div className="flex w-full flex-wrap gap-2 sm:w-auto">
-            <Button as="a" href="tel:+912026138375" variant="secondary" size="sm" className="flex-1 border-white/30 bg-white text-danger hover:bg-white/90 sm:flex-none">
+          <div className="flex w-full flex-col gap-2 min-[420px]:flex-row min-[420px]:flex-wrap sm:w-auto">
+            <Button as="a" href="tel:+912026138375" variant="secondary" size="sm" className="w-full border-white/30 bg-white text-danger hover:bg-white/90 min-[420px]:flex-1 sm:w-auto sm:flex-none">
               Call Nana Peth: 26138375
             </Button>
-            <Button as="a" href="tel:+917769976833" variant="secondary" size="sm" className="flex-1 border-white/30 bg-white text-danger hover:bg-white/90 sm:flex-none">
+            <Button as="a" href="tel:+917769976833" variant="secondary" size="sm" className="w-full border-white/30 bg-white text-danger hover:bg-white/90 min-[420px]:flex-1 sm:w-auto sm:flex-none">
               Call Kondhwa: 77699 76833
             </Button>
           </div>
@@ -765,7 +765,7 @@ function FaqItem({ faq, index }) {
         aria-expanded={open}
         className="flex min-h-[48px] w-full items-center justify-between gap-3 px-4 py-3.5 text-left sm:px-5 sm:py-4"
       >
-        <span className="min-w-0 text-[14px] font-semibold text-text-primary sm:text-[14.5px]">{faq.question}</span>
+        <span className="min-w-0 text-[13.5px] font-semibold text-text-primary sm:text-[14.5px]">{faq.question}</span>
         <ChevronDown
           size={17}
           className={`shrink-0 text-secondary transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
@@ -780,7 +780,7 @@ function FaqItem({ faq, index }) {
             transition={{ duration: 0.25, ease: 'easeOut' }}
             className="overflow-hidden"
           >
-            <p className="px-4 pb-4 text-[13.5px] leading-relaxed text-text-secondary sm:px-5">
+            <p className="px-4 pb-4 text-[13px] leading-relaxed text-text-secondary sm:text-[13.5px] sm:px-5">
               {faq.answer}
             </p>
           </motion.div>
