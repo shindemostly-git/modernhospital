@@ -1,0 +1,7 @@
+package com.hospital.backend.exception;
+
+public class ConsultationNotFoundException extends RuntimeException {
+    public ConsultationNotFoundException(String message) {
+        super(message);
+    }
+}
